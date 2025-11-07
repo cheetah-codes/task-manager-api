@@ -2,8 +2,16 @@ const mongoose = require("mongoose");
 // import  from "mongoose";
 
 const TaskSchema = new mongoose.Schema({
-  name: String,
-  completed: Boolean,
+  name: {
+    type:String,
+    required:[true,'must provide name'],
+    trin:true,
+    maxlength:[20,"name cannot exceed 20 chharacters"]
+},
+  completed: {
+    type:Boolean,
+    default:false
+},
 });
 
 
